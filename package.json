@@ -2,10 +2,14 @@
   "name": "vue-view-more",
   "version": "1.0.0",
   "description": "vue view more ui component",
-  "main": "index.js",
+  "main": "dist/viewMore.js",
   "directories": {
     "example": "example"
   },
+  "keywords": [
+    "vue",
+    "view more"
+  ],
   "scripts": {
     "start": "webpack-dev-server --config ./build/demo.config.js",
     "build": "webpack --config ./build/pack.config.js"
