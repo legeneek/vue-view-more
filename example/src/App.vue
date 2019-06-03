@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <ViewMore :height="100">
+    <ViewMore :height="200" ref="more">
       <template v-slot:content>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a pellentesque ex. Aenean placerat lectus lacus, ut imperdiet odio dapibus sed. Vestibulum consectetur facilisis justo ut luctus. Mauris cursus erat quis nisl tempus tincidunt. Vestibulum eget risus feugiat, efficitur urna a, pulvinar turpis. Quisque auctor nisl nec metus pretium, maximus consectetur magna consectetur. Pellentesque tempor commodo accumsan. Nunc sed ipsum nisi. Nam mollis efficitur arcu sed rutrum.</p>
+        <p v-for="(item,index) in list" :key="index">{{item}}</p>
       </template>
       <template v-slot:trigger>
         <div class="btn-vm">view more</div>
@@ -18,6 +18,22 @@ export default {
   name: 'app',
   components: {
     ViewMore
+  },
+  data() {
+    return {
+      list: []
+    }
+  },
+  mounted() {
+    this.list = [
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a pellentesque ex. Aenean placerat lectus lacus.`,
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a pellentesque ex. Aenean placerat lectus lacus.`,
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a pellentesque ex. Aenean placerat lectus lacus.`,
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a pellentesque ex. Aenean placerat lectus lacus.`,
+      ]
+    this.$nextTick(() => {
+      this.$refs.more.update()
+    })
   }
 }
 </script>

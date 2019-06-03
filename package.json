@@ -1,6 +1,6 @@
 {
   "name": "vue-view-more",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue view more ui component",
   "main": "dist/viewMore.js",
   "directories": {

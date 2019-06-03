@@ -18,23 +18,26 @@ export default {
   data() {
     return {
       showViewMore: false,
-      containerStyle: ''
-    }
+      containerStyle: ""
+    };
   },
   mounted() {
-    const elHeight = this.$el.offsetHeight
-    if (elHeight > this.height) {
-      this.containerStyle = `height: ${this.height}px; overflow: hidden;`
-      this.showViewMore = true
-    }
+    this.update()
   },
   methods: {
+    update() {
+      const elHeight = this.$el.offsetHeight
+      if (elHeight > this.height) {
+        this.containerStyle = `max-height: ${this.height}px; overflow: hidden;`;
+        this.showViewMore = true;
+      }
+    },
     expend() {
-      this.containerStyle = 'height: auto;'
-      this.showViewMore = false
+      this.containerStyle = "";
+      this.showViewMore = false;
     }
   }
-}
+};
 </script>
 
 <style scoped>
