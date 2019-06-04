@@ -1,5 +1,5 @@
 # vue-view-more
-view more UI component based on vue2.
+view more UI component based on vue2.6+.
 
 ## Installation
 ```
@@ -77,5 +77,5 @@ export default {
 
 | Property | Type | Required? | Description |
 |:---|:---|:---:|:---|
-| height | Number | yes | the init height of content |
+| height |  | yes | the init height of content |
 
